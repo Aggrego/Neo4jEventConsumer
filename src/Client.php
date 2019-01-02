@@ -11,7 +11,7 @@
 
 declare(strict_types = 1);
 
-namespace Aggrego\Neo4jEventConsumer;
+namespace Aggrego\Neo4jIntegration;
 
 use Aggrego\EventConsumer\Client as DomainClient;
 use Aggrego\EventConsumer\Event as ConsumedEvent;

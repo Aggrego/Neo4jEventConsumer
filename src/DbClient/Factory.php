@@ -11,7 +11,7 @@
 
 declare(strict_types = 1);
 
-namespace Aggrego\Neo4jEventConsumer\DbClient;
+namespace Aggrego\Neo4jIntegration\DbClient;
 
 use Assert\Assertion;
 use GraphAware\Neo4j\Client\Client;

@@ -1,5 +1,5 @@
 {
-  "name": "aggrego/neo4j-event-consumer",
+  "name": "aggrego/neo4j-integration",
   "type": "library",
   "description": "",
   "minimum-stability": "dev",
@@ -12,9 +12,8 @@
   ],
   "require": {
     "php": ">=7.1",
-    "aggrego/event-consumer": "dev-master",
-    "graphaware/neo4j-php-client": "^4.0",
-    "symfony/messenger": "^4.2"
+    "aggrego/command-consumer": "dev-master",
+    "graphaware/neo4j-php-client": "^4.0"
   },
   "require-dev": {
     "wikimedia/composer-merge-plugin": "1.4.*",
@@ -22,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Aggrego\\Neo4jEventConsumer\\": "src/"
+      "Aggrego\\Neo4jIntegration\\": "src/"
     }
   }
 }

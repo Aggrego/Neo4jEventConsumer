@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\Aggrego\Neo4jEventConsumer\DbClient;
+namespace spec\Aggrego\Neo4jIntegration\DbClient;
 
-use Aggrego\Neo4jEventConsumer\DbClient\Factory;
+use Aggrego\Neo4jIntegration\DbClient\Factory;
 use PhpSpec\ObjectBehavior;
 
 class FactorySpec extends ObjectBehavior

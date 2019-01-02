@@ -11,10 +11,10 @@
 
 declare(strict_types = 1);
 
-namespace spec\Aggrego\Neo4jEventConsumer;
+namespace spec\Aggrego\Neo4jIntegration;
 
 use Aggrego\EventConsumer\Client as DomainClient;
-use Aggrego\Neo4jEventConsumer\Client;
+use Aggrego\Neo4jIntegration\Client;
 use PhpSpec\ObjectBehavior;
 use Symfony\Component\Messenger\MessageBusInterface;
 

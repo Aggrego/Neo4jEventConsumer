@@ -1,8 +1,8 @@
-[![License](https://poser.pugx.org/aggrego/neo4j-event-consumer/license.svg)](https://packagist.org/packages/aggrego/neo4j-event-consumer)
-[![Latest Stable Version](https://poser.pugx.org/aggrego/neo4j-event-consumer/v/stable.svg)](https://packagist.org/packages/aggrego/neo4j-event-consumer)
-[![Total Downloads](https://poser.pugx.org/aggrego/neo4j-event-consumer/downloads.svg)](https://packagist.org/packages/aggrego/neo4j-event-consumer)
-[![Travis](https://travis-ci.org/Aggrego/Neo4jEventConsumer.svg?branch=master)](https://travis-ci.org/Aggrego/Neo4jEventConsumer/builds)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Aggrego/Neo4jEventConsumer/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Aggrego/Neo4jEventConsumer/?branch=master)
+[![License](https://poser.pugx.org/aggrego/neo4j-integration/license.svg)](https://packagist.org/packages/aggrego/neo4j-integration)
+[![Latest Stable Version](https://poser.pugx.org/aggrego/neo4j-integration/v/stable.svg)](https://packagist.org/packages/aggrego/neo4j-integration)
+[![Total Downloads](https://poser.pugx.org/aggrego/neo4j-integration/downloads.svg)](https://packagist.org/packages/aggrego/neo4j-integration)
+[![Travis](https://travis-ci.org/Aggrego/Neo4jIntegration.svg?branch=master)](https://travis-ci.org/Aggrego/Neo4jIntegration/builds)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Aggrego/Neo4jIntegration/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Aggrego/Neo4jIntegration/?branch=master)
 
 ## Versioning
  
