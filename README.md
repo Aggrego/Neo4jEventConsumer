@@ -1,8 +1,8 @@
 [![License](https://poser.pugx.org/aggrego/neo4j-integration/license.svg)](https://packagist.org/packages/aggrego/neo4j-integration)
 [![Latest Stable Version](https://poser.pugx.org/aggrego/neo4j-integration/v/stable.svg)](https://packagist.org/packages/aggrego/neo4j-integration)
 [![Total Downloads](https://poser.pugx.org/aggrego/neo4j-integration/downloads.svg)](https://packagist.org/packages/aggrego/neo4j-integration)
-[![Travis](https://travis-ci.org/Aggrego/Neo4jIntegration.svg?branch=master)](https://travis-ci.org/Aggrego/Neo4jIntegration/builds)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Aggrego/Neo4jIntegration/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Aggrego/Neo4jIntegration/?branch=master)
+[![Travis](https://travis-ci.org/Aggrego/Neo4jIntegration.svg?branch=master)](https://travis-ci.org/Aggrego/Neo4jIntegration/builds)
 
 ## Versioning
  
