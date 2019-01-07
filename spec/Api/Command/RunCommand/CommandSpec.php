@@ -9,17 +9,17 @@
  *
  */
 
-namespace spec\Aggrego\Neo4jIntegration\Api\Command\CreateNode;
+namespace spec\Aggrego\Neo4jIntegration\Api\Command\RunCommand;
 
 use Aggrego\CommandConsumer\Command as CommandConsumer;
-use Aggrego\Neo4jIntegration\Api\Command\CreateNode\Command;
+use Aggrego\Neo4jIntegration\Api\Command\RunCommand\Command;
 use PhpSpec\ObjectBehavior;
 
 class CommandSpec extends ObjectBehavior
 {
     function let()
     {
-        $this->beConstructedWith('test', []);
+        $this->beConstructedWith('test');
     }
 
     function it_is_initializable()
@@ -28,13 +28,8 @@ class CommandSpec extends ObjectBehavior
         $this->shouldHaveType(CommandConsumer::class);
     }
 
-    function it_should_have_node_name(): void
-    {
-        $this->getNodeName()->shouldBeString();
-    }
-
     function it_should_have_data(): void
     {
-        $this->getData()->shouldBeArray();
+        $this->getCypherQuery()->shouldBeString();
     }
 }

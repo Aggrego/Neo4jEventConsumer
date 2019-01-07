@@ -9,15 +9,14 @@
  *
  */
 
-namespace Aggrego\Neo4jIntegration\Api\Command\CreateRelationship;
+namespace Aggrego\Neo4jIntegration\Api\Command\RunCommand;
 
 use Aggrego\CommandConsumer\Name;
 use Aggrego\CommandConsumer\Response as CommandConsumerResponse;
 
-
 class Response implements CommandConsumerResponse
 {
-    private const NAME = 'neo4j_integration.create_relationship.response';
+    private const NAME = 'neo4j_integration.create_node.response';
 
     private const SUCCESS_KEY = 'success';
 

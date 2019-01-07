@@ -9,7 +9,7 @@
  *
  */
 
-namespace Aggrego\Neo4jIntegration\Api\Command\CreateNode;
+namespace Aggrego\Neo4jIntegration\Api\Command\RunCommand;
 
 use GraphAware\Neo4j\Client\Client;
 use GraphAware\Neo4j\Client\Exception\Neo4jExceptionInterface;
@@ -27,13 +27,7 @@ class UseCase
     public function handle(Command $command): Response
     {
         try {
-            $this->client->run(
-                'CREATE (n:{node}) SET n += {data}',
-                [
-                    'node' => $command->getNodeName(),
-                    'data' => $command->getData(),
-                ]
-            );
+            $this->client->run($command->getCypherQuery());
         } catch (Neo4jExceptionInterface $e) {
             return Response::fail($e->getMessage());
         }

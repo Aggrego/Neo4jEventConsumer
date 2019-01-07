@@ -9,10 +9,10 @@
  *
  */
 
-namespace spec\Aggrego\Neo4jIntegration\Api\Command\CreateNode;
+namespace spec\Aggrego\Neo4jIntegration\Api\Command\RunCommand;
 
 use Aggrego\CommandConsumer\Response as CommandConsumerResponse;
-use Aggrego\Neo4jIntegration\Api\Command\CreateNode\Response;
+use Aggrego\Neo4jIntegration\Api\Command\RunCommand\Response;
 use PhpSpec\ObjectBehavior;
 
 class ResponseSpec extends ObjectBehavior

@@ -9,7 +9,7 @@
  *
  */
 
-namespace Aggrego\Neo4jIntegration\Api\Command\CreateNode;
+namespace Aggrego\Neo4jIntegration\Api\Command\RunCommand;
 
 use Aggrego\CommandConsumer\Command as CommandConsumer;
 use Aggrego\CommandConsumer\Name;
@@ -17,19 +17,15 @@ use Assert\Assertion;
 
 class Command implements CommandConsumer
 {
-    private const NAME = 'neo4j_integration.create_node';
+    private const NAME = 'neo4j_integration.run_command';
 
     /** @var string */
-    private $nodeName;
+    private $query;
 
-    /** @var array */
-    private $data;
-
-    public function __construct(string $nodeName, array $data)
+    public function __construct(string $query)
     {
-        Assertion::notEmpty($nodeName);
-        $this->nodeName = $nodeName;
-        $this->data = $data;
+        Assertion::notEmpty($query);
+        $this->query = $query;
     }
 
     public function getName(): Name
@@ -40,18 +36,12 @@ class Command implements CommandConsumer
     public function getPayload(): array
     {
         return [
-            'node_name' => $this->nodeName,
-            'data' => $this->data
+            'query' => $this->query
         ];
     }
 
-    public function getNodeName(): string
+    public function getCypherQuery(): string
     {
-        return $this->nodeName;
-    }
-
-    public function getData(): array
-    {
-        return $this->data;
+        return $this->query;
     }
 }
