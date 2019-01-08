@@ -19,7 +19,7 @@ class CommandSpec extends ObjectBehavior
 {
     function let()
     {
-        $this->beConstructedWith('test');
+        $this->beConstructedWith('test', ['test']);
     }
 
     function it_is_initializable()
@@ -28,8 +28,12 @@ class CommandSpec extends ObjectBehavior
         $this->shouldHaveType(CommandConsumer::class);
     }
 
-    function it_should_have_data(): void
+    function it_should_have_query(): void
     {
         $this->getCypherQuery()->shouldBeString();
+    }
+    function it_should_have_parameters(): void
+    {
+        $this->getParameters()->shouldBeArray();
     }
 }

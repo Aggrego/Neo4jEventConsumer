@@ -22,10 +22,14 @@ class Command implements CommandConsumer
     /** @var string */
     private $query;
 
-    public function __construct(string $query)
+    /** @var array */
+    private $parameters;
+
+    public function __construct(string $query, array $parameters = [])
     {
         Assertion::notEmpty($query);
         $this->query = $query;
+        $this->parameters = $parameters;
     }
 
     public function getName(): Name
@@ -36,12 +40,18 @@ class Command implements CommandConsumer
     public function getPayload(): array
     {
         return [
-            'query' => $this->query
+            'query' => $this->query,
+            'parameters' => $this->parameters
         ];
     }
 
     public function getCypherQuery(): string
     {
         return $this->query;
+    }
+
+    public function getParameters(): array
+    {
+        return $this->parameters;
     }
 }

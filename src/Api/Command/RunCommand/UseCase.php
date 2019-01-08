@@ -27,7 +27,7 @@ class UseCase
     public function handle(Command $command): Response
     {
         try {
-            $this->client->run($command->getCypherQuery());
+            $this->client->run($command->getCypherQuery(), $command->getParameters());
         } catch (Neo4jExceptionInterface $e) {
             return Response::fail($e->getMessage());
         }
