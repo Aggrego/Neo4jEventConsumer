@@ -9,6 +9,8 @@
  *
  */
 
+declare(strict_types = 1);
+
 namespace spec\Aggrego\Neo4jIntegration\Api\Command\RunCommand;
 
 use Aggrego\CommandConsumer\Command as CommandConsumer;
@@ -17,9 +19,11 @@ use PhpSpec\ObjectBehavior;
 
 class CommandSpec extends ObjectBehavior
 {
+    public const UUID = '7835a2f1-65c4-4e05-aacf-2e9ed950f5f2';
+
     function let()
     {
-        $this->beConstructedWith('test', ['test']);
+        $this->beConstructedWith(self::UUID, 'test', ['test']);
     }
 
     function it_is_initializable()
@@ -35,5 +39,24 @@ class CommandSpec extends ObjectBehavior
     function it_should_have_parameters(): void
     {
         $this->getParameters()->shouldBeArray();
+    }
+
+    function it_serialize()
+    {
+        $this->serialize()->shouldBeString();
+    }
+
+    function it_should_unserialize()
+    {
+        $this->unserialize(
+            json_encode(
+                [
+                    'uuid' => '7835a2f1-65c4-4e05-aacf-2e9ed950f5f2',
+                    'name' => Command::NAME,
+                    'query' => 'test',
+                    'parameters' => [],
+                ]
+            )
+        )->shouldBeAnInstanceOf(Command::class);
     }
 }
