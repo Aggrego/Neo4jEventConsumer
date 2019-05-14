@@ -9,10 +9,11 @@
  *
  */
 
+declare(strict_types = 1);
+
 namespace Aggrego\Neo4jIntegration\Api\Command\RunCommand;
 
 use GraphAware\Neo4j\Client\Client;
-use GraphAware\Neo4j\Client\Exception\Neo4jExceptionInterface;
 
 class UseCase
 {
@@ -24,14 +25,8 @@ class UseCase
         $this->client = $client;
     }
 
-    public function handle(Command $command): Response
+    public function handle(Command $command): void
     {
-        try {
-            $this->client->run($command->getCypherQuery(), $command->getParameters());
-        } catch (Neo4jExceptionInterface $e) {
-            return Response::fail($e->getMessage());
-        }
-
-        return Response::ok();
+        $this->client->run($command->getCypherQuery(), $command->getParameters());
     }
 }

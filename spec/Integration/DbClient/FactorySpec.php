@@ -9,6 +9,8 @@
  *
  */
 
+declare(strict_types = 1);
+
 namespace spec\Aggrego\Neo4jIntegration\Integration\DbClient;
 
 use Aggrego\Neo4jIntegration\Integration\DbClient\Factory;

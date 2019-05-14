@@ -9,10 +9,11 @@
  *
  */
 
+declare(strict_types = 1);
+
 namespace spec\Aggrego\Neo4jIntegration\Api\Command\RunCommand;
 
 use Aggrego\Neo4jIntegration\Api\Command\RunCommand\Command;
-use Aggrego\Neo4jIntegration\Api\Command\RunCommand\Response;
 use Aggrego\Neo4jIntegration\Api\Command\RunCommand\UseCase;
 use GraphAware\Neo4j\Client\Client;
 use PhpSpec\ObjectBehavior;
@@ -31,6 +32,6 @@ class UseCaseSpec extends ObjectBehavior
 
     function it_should_handle_command()
     {
-        $this->handle(new Command('test'))->shouldBeAnInstanceOf(Response::class);
+        $this->handle(new Command(CommandSpec::UUID, 'test', ['test']))->shouldReturn(null);
     }
 }
